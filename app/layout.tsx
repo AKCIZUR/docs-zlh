@@ -1,3 +1,4 @@
+import './globals.css';
 import Script from 'next/script';
 
 export default function RootLayout({
@@ -6,14 +7,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        {children}
 
-      <Script
-        defer
-        data-domain='akcizur.github.io'
-        src='https://plausible.io/js/script.js'
-      />
+        <Script
+          defer
+          data-domain="akcizur.github.io"
+          src="https://plausible.io/js/script.js"
+        />
+      </body>
     </html>
   );
 }
